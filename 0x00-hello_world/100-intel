@@ -1,7 +1,2 @@
 #!/bin/bash
-# Get the name of the C file
-CFILE="main.c"
-# Get the name of the output file
-OUTFILE="$(basename $CFILE .c).s"
-# Compile the C file and generate the assembly code
-gcc -S -masm=intel $CFILE -o $OUTFILE
+gcc -S -masm=intel $CFILE
