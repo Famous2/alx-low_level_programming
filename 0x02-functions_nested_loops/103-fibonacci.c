@@ -9,15 +9,17 @@
 int main(void)
 {
 int i;
-long int fib1 = 1, fib2 = 2, next_fib, sum = 0;
-while (fib2 <= 4000000)
+long int fib1 = 1, fib2 = 2, next_fib, sum = 2;
+printf("%ld, %ld", fib1, fib2);
+for (i = 2; i < 50; i++)
 {
-if (fib2 % 2 == 0)
-sum += fib2;
 next_fib = fib1 + fib2;
+printf(", %ld", next_fib);
+if (next_fib % 2 == 0)
+sum += next_fib;
 fib1 = fib2;
 fib2 = next_fib;
 }
-printf("%ld\n", sum);
+printf("\n%ld\n", sum);
 return (0);
 }
